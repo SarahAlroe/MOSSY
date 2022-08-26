@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <EEPROM.h>
 
-const byte DEVICE_ID = 0;
+const byte DEVICE_ID = 1;
 
 //Data consts
 const unsigned int timerCompareValues[] = {61124, 57736, 54465, 51439, 48543, 45829, 43252, 40815, 38520, 36363, 34316, 32403, 30580, 28867, 27247, 25706, 24271, 22903, 21625, 20407, 19259, 18181, 17158, 16196, 15290, 14429, 13619, 12856, 12135, 11454, 10810, 10203, 9631, 9090, 8580, 8097, 7643, 7214, 6809, 6427, 6066, 5726, 5404, 5101, 4815, 4544, 4289, 4049, 3821, 3607, 3404, 3213, 3033, 2863, 2702, 2550, 2407, 2272, 2144, 2024, 1910, 1803, 1702, 1606, 1516, 1431, 1350, 1275, 1203, 1135, 1072, 1011, 955, 901, 850, 803, 757, 715, 675, 637, 601, 567, 535, 505, 477, 450, 425, 401, 378, 357, 337, 318, 300, 283, 267, 252, 238, 224, 212, 200, 189, 178, 168, 158, 149, 141, 133, 126, 118, 112, 105, 99, 94, 88, 83, 79, 74, 70, 66, 62, 59, 55, 52, 49, 46, 44, 41, 39};
@@ -47,6 +47,7 @@ void setup() {
 
   DDRD = 0xFF;
   loadData();
+  //saveDefaults();
 }
 
 void loop() {
@@ -204,6 +205,18 @@ void saveData() {
   for (byte i = 0; i < envelopeCount; i++) {
     EEPROM.put(dataOffset + (i * sizeof(long)), envelope[i]);
   }
+}
+
+void saveDefaults() {
+  for (byte i = 0; i < sampleCount; i++) {
+    samples[i] = 255*i/sampleCount;
+  }
+  envelope[ATTACK] = 500;
+  envelope[DECAY] = 500;
+  envelope[SUSTAIN] = 200;
+  envelope[RELEASE] = 500;
+  envelope[PBSPAN] = 8;
+  saveData();
 }
 
 void setInterruptTimer(unsigned int compareValue) {

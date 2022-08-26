@@ -18,7 +18,7 @@ const byte envelopeCount = 5; //Number of steps in envelope. Must be same for al
 const byte channelCount = 16; //Number of channels. Standard midi has 16 channels.
 
 //I/O configuration
-const byte ROT_ENC_PINS[2][3] = {{7, 8, 9}, {4, 5, 6}};
+const byte ROT_ENC_PINS[2][3] = {{6, 5, 4}, {8, 7, 9}};
 const byte SCREEN_ADDR = 0x3C;
 const byte SCREEN_WIDTH = 128;
 const byte SCREEN_HEIGHT = 64;

@@ -1,0 +1,257 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Simulation_SPICE:VSIN V2
+U 1 1 61C1EB4E
+P 2350 2500
+F 0 "V2" H 2480 2591 50  0000 L CNN
+F 1 "VSIN" H 2480 2500 50  0000 L CNN
+F 2 "" H 2350 2500 50  0001 C CNN
+F 3 "~" H 2350 2500 50  0001 C CNN
+F 4 "Y" H 2350 2500 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 2350 2500 50  0001 L CNN "Spice_Primitive"
+F 6 "sin(5 10 1k)" H 2480 2409 50  0000 L CNN "Spice_Model"
+	1    2350 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R1
+U 1 1 61C1F6C6
+P 3100 1050
+F 0 "R1" H 3168 1096 50  0000 L CNN
+F 1 "1M" H 3168 1005 50  0000 L CNN
+F 2 "" H 3100 1050 50  0001 C CNN
+F 3 "~" H 3100 1050 50  0001 C CNN
+	1    3100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Simulation_SPICE:VDC V1
+U 1 1 61C20A91
+P 1900 2450
+F 0 "V1" H 2030 2541 50  0000 L CNN
+F 1 "VDC" H 2030 2450 50  0000 L CNN
+F 2 "" H 1900 2450 50  0001 C CNN
+F 3 "~" H 1900 2450 50  0001 C CNN
+F 4 "Y" H 1900 2450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 1900 2450 50  0001 L CNN "Spice_Primitive"
+F 6 "dc(12)" H 2030 2359 50  0000 L CNN "Spice_Model"
+	1    1900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R2
+U 1 1 61C22569
+P 3100 1750
+F 0 "R2" H 3168 1796 50  0000 L CNN
+F 1 "1M" H 3168 1705 50  0000 L CNN
+F 2 "" H 3100 1750 50  0001 C CNN
+F 3 "~" H 3100 1750 50  0001 C CNN
+	1    3100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R3
+U 1 1 61C2287C
+P 3100 2450
+F 0 "R3" H 3168 2496 50  0000 L CNN
+F 1 "1M" H 3168 2405 50  0000 L CNN
+F 2 "" H 3100 2450 50  0001 C CNN
+F 3 "~" H 3100 2450 50  0001 C CNN
+	1    3100 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R4
+U 1 1 61C24192
+P 3100 3150
+F 0 "R4" H 3168 3196 50  0000 L CNN
+F 1 "1M" H 3168 3105 50  0000 L CNN
+F 2 "" H 3100 3150 50  0001 C CNN
+F 3 "~" H 3100 3150 50  0001 C CNN
+	1    3100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R5
+U 1 1 61C24486
+P 3100 3850
+F 0 "R5" H 3168 3896 50  0000 L CNN
+F 1 "1M" H 3168 3805 50  0000 L CNN
+F 2 "" H 3100 3850 50  0001 C CNN
+F 3 "~" H 3100 3850 50  0001 C CNN
+	1    3100 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1300 3100 1400
+Wire Wire Line
+	3300 1400 3100 1400
+Connection ~ 3100 1400
+Wire Wire Line
+	3100 1400 3100 1500
+Wire Wire Line
+	3300 2100 3100 2100
+Wire Wire Line
+	3100 2100 3100 2000
+Wire Wire Line
+	3100 2200 3100 2100
+Connection ~ 3100 2100
+Wire Wire Line
+	3300 2800 3100 2800
+Wire Wire Line
+	3100 2800 3100 2700
+Wire Wire Line
+	3100 2800 3100 2900
+Connection ~ 3100 2800
+Wire Wire Line
+	3300 3500 3100 3500
+Wire Wire Line
+	3100 3500 3100 3600
+Wire Wire Line
+	3100 3500 3100 3400
+Connection ~ 3100 3500
+Wire Wire Line
+	3300 1600 2950 1600
+Wire Wire Line
+	3300 2300 2950 2300
+Wire Wire Line
+	3300 3000 2950 3000
+Wire Wire Line
+	3300 3700 2950 3700
+Wire Wire Line
+	2950 3700 2950 3000
+Connection ~ 2950 2300
+Wire Wire Line
+	2950 2300 2950 1600
+Connection ~ 2950 3000
+Wire Wire Line
+	2950 3000 2950 2300
+Wire Wire Line
+	2950 2300 2350 2300
+$Comp
+L power:GND #PWR0101
+U 1 1 61C2E1E5
+P 3100 4100
+F 0 "#PWR0101" H 3100 3850 50  0001 C CNN
+F 1 "GND" H 3105 3927 50  0000 C CNN
+F 2 "" H 3100 4100 50  0001 C CNN
+F 3 "" H 3100 4100 50  0001 C CNN
+	1    3100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 2700 2350 4100
+Wire Wire Line
+	2350 4100 3100 4100
+Connection ~ 3100 4100
+Wire Wire Line
+	3500 4100 3100 4100
+Wire Wire Line
+	3500 3200 3550 3200
+Wire Wire Line
+	3500 3900 3550 3900
+Wire Wire Line
+	3550 3200 3550 3900
+Wire Wire Line
+	3500 3900 3500 4100
+Wire Wire Line
+	3550 3200 3550 2500
+Wire Wire Line
+	3550 2500 3500 2500
+Connection ~ 3550 3200
+Wire Wire Line
+	3550 2500 3550 1800
+Wire Wire Line
+	3550 1800 3500 1800
+Connection ~ 3550 2500
+Wire Wire Line
+	3500 3300 3450 3300
+Wire Wire Line
+	3450 3300 3450 2600
+Wire Wire Line
+	3450 2600 3500 2600
+Wire Wire Line
+	3450 2600 3450 1900
+Wire Wire Line
+	3450 1900 3500 1900
+Connection ~ 3450 2600
+Wire Wire Line
+	3450 1900 3450 1200
+Wire Wire Line
+	3450 1200 3500 1200
+Connection ~ 3450 1900
+Wire Wire Line
+	3450 1200 3450 800 
+Wire Wire Line
+	3450 800  3100 800 
+Connection ~ 3450 1200
+Wire Wire Line
+	3100 800  1900 800 
+Wire Wire Line
+	1900 800  1900 2250
+Connection ~ 3100 800 
+Wire Wire Line
+	1900 2650 1900 4100
+Wire Wire Line
+	1900 4100 2350 4100
+Connection ~ 2350 4100
+$Comp
+L pspice:OPAMP U4
+U 1 1 61C3A1D5
+P 3600 3600
+F 0 "U4" H 3944 3646 50  0000 L CNN
+F 1 "OPAMP" H 3944 3555 50  0000 L CNN
+F 2 "" H 3600 3600 50  0001 C CNN
+F 3 "~" H 3600 3600 50  0001 C CNN
+	1    3600 3600
+	1    0    0    -1  
+$EndComp
+Connection ~ 3500 3900
+$Comp
+L pspice:OPAMP U3
+U 1 1 61C3A92C
+P 3600 2900
+F 0 "U3" H 3944 2946 50  0000 L CNN
+F 1 "OPAMP" H 3944 2855 50  0000 L CNN
+F 2 "" H 3600 2900 50  0001 C CNN
+F 3 "~" H 3600 2900 50  0001 C CNN
+	1    3600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:OPAMP U2
+U 1 1 61C3AD9E
+P 3600 2200
+F 0 "U2" H 3944 2246 50  0000 L CNN
+F 1 "OPAMP" H 3944 2155 50  0000 L CNN
+F 2 "" H 3600 2200 50  0001 C CNN
+F 3 "~" H 3600 2200 50  0001 C CNN
+	1    3600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:OPAMP U1
+U 1 1 61C3B32B
+P 3600 1500
+F 0 "U1" H 3944 1546 50  0000 L CNN
+F 1 "OPAMP" H 3944 1455 50  0000 L CNN
+F 2 "" H 3600 1500 50  0001 C CNN
+F 3 "~" H 3600 1500 50  0001 C CNN
+	1    3600 1500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
