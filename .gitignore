@@ -15,8 +15,8 @@
 *.kicad_prl
 *.sch-bak
 *~
-*-backups/*
-*/gerb/*
+*-backups/
+*gerb/
 _autosave-*
 *.tmp
 *-save.pro
@@ -36,6 +36,7 @@ fp-info-cache
 
 ### KiCad Patch ###
 rescue-backup/
+*-rescue.*
 
 *.tsv
 bom/
@@ -44,3 +45,7 @@ bom/
 out/
 
 # End of https://www.toptal.com/developers/gitignore/api/kicad
+
+# FreeCad
+*.FCStd1
+*.stl

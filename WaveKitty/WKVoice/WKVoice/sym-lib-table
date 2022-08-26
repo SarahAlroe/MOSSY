@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "WKVoice-rescue")(type "Legacy")(uri "${KIPRJMOD}/WKVoice-rescue.lib")(options "")(descr ""))
+)
